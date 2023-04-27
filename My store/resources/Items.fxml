@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMousePressed="#click" prefHeight="150.0" prefWidth="620.0" style="-fx-background-radius: 20; -fx-border-color: #c9b483; -fx-border-radius: 20;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.estore.Item">
+   <children>
+      <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="13.0" prefHeight="125.0" prefWidth="590.0">
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+         <children>
+            <Pane prefHeight="125.0" prefWidth="130.0">
+               <children>
+                  <ImageView fx:id="productPic" fitHeight="125.0" fitWidth="125.0" layoutX="7.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@iPhone-14.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane opacity="0.57" prefHeight="125.0" prefWidth="45.0" />
+            <Line endX="-101.41436767578125" endY="128.60299682617188" opacity="0.41" startX="-102.1217041015625" startY="26.99639129638672" />
+            <AnchorPane prefHeight="125.0" prefWidth="230.0">
+               <opaqueInsets>
+                  <Insets left="10.0" />
+               </opaqueInsets>
+               <children>
+                  <VBox prefHeight="125.0" prefWidth="230.0">
+                     <padding>
+                        <Insets left="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <Label fx:id="productName" prefHeight="19.0" prefWidth="220.0" text="Product Name">
+                           <font>
+                              <Font name="Cambria Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Pane prefHeight="10.0" prefWidth="200.0" />
+                        <Label fx:id="aboutProduct" text="This is a dummy discriprition of the product that iis to be entered in this portion" wrapText="true">
+                           <font>
+                              <Font name="Cambria Bold Italic" size="13.0" />
+                           </font></Label>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <Line endX="-101.41436767578125" endY="128.60299682617188" opacity="0.41" startX="-102.1217041015625" startY="26.99639129638672" />
+            <HBox prefHeight="125.0" prefWidth="160.0">
+               <children>
+                  <VBox prefHeight="125.0" prefWidth="162.0">
+                     <children>
+                        <Pane prefHeight="50.0" prefWidth="50.0" />
+                        <Label fx:id="productPrice" alignment="CENTER" prefHeight="19.0" prefWidth="163.0" text="Rs. 123456" textAlignment="CENTER">
+                           <font>
+                              <Font name="Cambria Bold Italic" size="13.0" />
+                           </font></Label>
+                     </children>
+                  </VBox>
+               </children></HBox>
+         </children>
+         <opaqueInsets>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </opaqueInsets>
+      </HBox>
+   </children>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
+</AnchorPane>

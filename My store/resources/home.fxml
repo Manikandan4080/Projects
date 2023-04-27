@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.estore.Home">
+   <children>
+      <BorderPane prefHeight="600.0" prefWidth="1000.0">
+         <top>
+            <AnchorPane prefHeight="100.0" prefWidth="1000.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="80.0" fitWidth="100.0" layoutX="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="10.0">
+                     <image>
+                        <Image url="@logo.png" />
+                     </image></ImageView>
+                  <HBox alignment="CENTER_LEFT" layoutX="141.0" prefHeight="100.0" prefWidth="850.0" AnchorPane.leftAnchor="140.0">
+                     <children>
+                        <TextField fx:id="searchFeild" prefHeight="50.0" prefWidth="250.0" promptText="Search..." style="-fx-background-radius: 25;">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button mnemonicParsing="false" onAction="#searchButtonOnAction" prefHeight="50.0" prefWidth="100.0" style="-fx-background-radius: 25; -fx-background-color: #c3aa5f;" text="Search">
+                           <font>
+                              <Font name="Cambria" size="20.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Pane prefHeight="200.0" prefWidth="165.0">
+                           <children>
+                              <Label fx:id="welcomeText" alignment="CENTER" contentDisplay="CENTER" layoutY="8.0" prefHeight="85.0" prefWidth="165.0" text="Welcome" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font name="Cambria" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children></Pane>
+                        <Button fx:id="cartButton" layoutX="265.0" layoutY="35.0" mnemonicParsing="false" onAction="#cartButtonOnAction" prefHeight="50.0" prefWidth="100.0" style="-fx-background-radius: 25; -fx-background-color: #c3aa5f;" text="Cart">
+                           <font>
+                              <Font name="Cambria" size="20.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Label fx:id="welcomeText1" alignment="CENTER" contentDisplay="CENTER" prefHeight="85.0" prefWidth="10.0" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Cambria" size="20.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="myOrdersButton" layoutX="595.0" layoutY="35.0" mnemonicParsing="false" onAction="#myOrdersButtonOnAction" prefHeight="50.0" prefWidth="120.0" style="-fx-background-radius: 25; -fx-background-color: #c3aa5f;" text="My Orders">
+                           <font>
+                              <Font name="Cambria" size="20.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Label fx:id="welcomeText11" alignment="CENTER" contentDisplay="CENTER" layoutX="580.0" layoutY="18.0" prefHeight="85.0" prefWidth="10.0" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Cambria" size="20.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="backButton" layoutX="480.0" layoutY="35.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="50.0" prefWidth="100.0" style="-fx-background-radius: 25; -fx-background-color: #c3aa5f;" text="Home">
+                           <font>
+                              <Font name="Cambria" size="20.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane prefHeight="500.0" prefWidth="350.0" style="-fx-background-color: #c3aa5f;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox layoutX="96.0" layoutY="35.0" prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: white; -fx-background-radius: 30;" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="30.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="60.0" prefWidth="300.0">
+                           <children>
+                              <Label fx:id="productName" prefHeight="19.0" prefWidth="163.0" text="Product Name">
+                                 <font>
+                                    <Font name="Cambria Italic" size="15.0" />
+                                 </font></Label>
+                              <Label fx:id="productPrice" prefHeight="19.0" prefWidth="92.0" text="Product Price">
+                                 <font>
+                                    <Font name="Cambria Italic" size="15.0" />
+                                 </font></Label>
+                           </children>
+                        </HBox>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <ImageView fx:id="productImg" fitHeight="120.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@iPhone-14.png" />
+                                 </image></ImageView>
+                              <Label fx:id="about" alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="300.0" text="This is a dummy Descriprition that is to be entered below image" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="Cambria Italic" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <HBox alignment="CENTER" prefHeight="70.0" prefWidth="300.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="19.0" prefWidth="140.0" text="Quantity">
+                                 <font>
+                                    <Font name="Cambria" size="25.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="quantityBox" opacity="0.63" prefHeight="27.0" prefWidth="77.0" promptText="1" style="-fx-background-radius: 25;">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></ComboBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="70.0" prefWidth="300.0">
+                           <children>
+                              <Button fx:id="addToCartButton" mnemonicParsing="false" onAction="#addToCartButtonOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: black; -fx-background-radius: 20;" text="Add to cart" textFill="WHITE">
+                                 <font>
+                                    <Font name="Cambria" size="15.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Pane prefHeight="30.0" prefWidth="80.0" />
+                              <Button fx:id="buyButton" mnemonicParsing="false" onAction="#buyButtonOnAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: black; -fx-background-radius: 20;" text="Buy" textFill="WHITE">
+                                 <font>
+                                    <Font name="Cambria" size="15.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER" layoutX="69.0" layoutY="439.0" prefHeight="40.0" prefWidth="300.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="25.0">
+                     <children>
+                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#logOutButtonAction" style="-fx-background-color: black; -fx-background-radius: 20;" text="Logout" textFill="WHITE">
+                           <font>
+                              <Font name="Cambria" size="15.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <ScrollPane prefHeight="500.0" prefWidth="650.0" BorderPane.alignment="CENTER">
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+               <content>
+                  <FlowPane fx:id="flowPane" prefHeight="150.0" prefWidth="625.0">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor></FlowPane>
+               </content>
+            </ScrollPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
